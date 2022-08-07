@@ -13,6 +13,7 @@ import { QuienesSomosComponent } from './componentes/quienes-somos/quienes-somos
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { RouterModule, Routes } from '@angular/router';
 import { EditorEmpleadosComponent } from './componentes/editor-empleados/editor-empleados.component';
+import { ErrorPersComponent } from './componentes/error-pers/error-pers.component';
 
 const appRoutes: Routes = [
 
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
   {path:'proyecto',component:ProyectosComponent},
   {path:'quienes',component:QuienesSomosComponent},
   {path:'contacto',component:ContactoComponent},
-  {path:'edita/:id',component:EditorEmpleadosComponent}
+  {path:'edita/:id',component:EditorEmpleadosComponent},
+  {path:'**',component:ErrorPersComponent}
 
 
 ]
