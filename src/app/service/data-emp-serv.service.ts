@@ -40,5 +40,11 @@ export class DataEmpServService {
     empleadoModificado.salario=empleado.salario;
   }
 
+  eliminarEmpleado(indice: number){
+
+    this.empleados.splice(indice,1);
+
+  }
+
 
 }

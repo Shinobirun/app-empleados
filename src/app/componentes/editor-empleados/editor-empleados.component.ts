@@ -46,6 +46,12 @@ export class EditorEmpleadosComponent implements OnInit {
 
 
   }
+
+  eliminaEmpleado(){
+    this.empleadoser.eliminarEmpleado(this.indice);
+    this.router.navigate(['']);
+  }
+
   cuadroNombre:String = "";
   cuadroApellido:String = "";
   cuadroCargo:String = "";
