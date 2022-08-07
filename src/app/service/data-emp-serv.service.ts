@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Empleado } from '../empleado.model';
+import { ServEmpleadosService } from './serv-empleados.service';
+import { DataFireService } from './data-fire.service';
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataEmpServService {
+
+  constructor(private servEmpleadosService: ServEmpleadosService, private dataFire: DataFireService) {}
 
   empleados:Empleado[]=[
 
@@ -22,6 +27,7 @@ export class DataEmpServService {
   agregarEmplServ(empleado:Empleado){
 
     this.empleados.push(empleado);
+    this.dataFire.guardarEmpleados(this.empleados);
   }
 
   encontrarEmpleado(indice:number){

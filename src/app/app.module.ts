@@ -7,6 +7,8 @@ import { EmpleadosHComponent } from './componentes/empleados-h/empleados-h.compo
 import { CaractEmpleadosComponent } from './componentes/caract-empleados/caract-empleados.component';
 import { ServEmpleadosService } from './service/serv-empleados.service';
 import { DataEmpServService } from './service/data-emp-serv.service';
+import { DataFireService} from './service/data-fire.service';
+import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './componentes/home/home.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { QuienesSomosComponent } from './componentes/quienes-somos/quienes-somos.component';
@@ -41,9 +43,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [ServEmpleadosService,DataEmpServService],
+  providers: [ServEmpleadosService,DataEmpServService,DataFireService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
