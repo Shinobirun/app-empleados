@@ -8,7 +8,8 @@
     <div class="row ">
         <div class="col-4">
             <div>
-                {{iH+1}}: {{empleadoH.nombre}} {{empleadoH.apellido}} {{empleadoH.cargo}} {{empleadoH.salario}}
+                <a [routerLink]="['edita',iH]">
+                {{iH+1}}: {{empleadoH.nombre}} {{empleadoH.apellido}} {{empleadoH.cargo}} {{empleadoH.salario}}</a>
             </div>
             <app-caract-empleados (caractEmpleado)="agregaCaract($event)"></app-caract-empleados>
             <ul>

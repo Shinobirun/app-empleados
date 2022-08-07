@@ -12,13 +12,16 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { QuienesSomosComponent } from './componentes/quienes-somos/quienes-somos.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { RouterModule, Routes } from '@angular/router';
+import { EditorEmpleadosComponent } from './componentes/editor-empleados/editor-empleados.component';
 
 const appRoutes: Routes = [
 
   {path:'', component:HomeComponent},
-  {path:'proyectos',component:ProyectosComponent},
+  {path:'proyecto',component:ProyectosComponent},
   {path:'quienes',component:QuienesSomosComponent},
-  {path:'contacto',component:ContactoComponent}
+  {path:'contacto',component:ContactoComponent},
+  {path:'edita/:id',component:EditorEmpleadosComponent}
+
 
 ]
 
@@ -30,7 +33,8 @@ const appRoutes: Routes = [
     HomeComponent,
     ProyectosComponent,
     QuienesSomosComponent,
-    ContactoComponent
+    ContactoComponent,
+    EditorEmpleadosComponent
   ],
   imports: [
     BrowserModule,

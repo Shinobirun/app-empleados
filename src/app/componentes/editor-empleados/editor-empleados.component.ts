@@ -5,11 +5,11 @@ import { DataEmpServService } from 'src/app/service/data-emp-serv.service';
 import { ServEmpleadosService } from 'src/app/service/serv-empleados.service';
 
 @Component({
-  selector: 'app-proyectos',
-  templateUrl: './proyectos.component.html',
-  styleUrls: ['./proyectos.component.css']
+  selector: 'app-editor-empleados',
+  templateUrl: './editor-empleados.component.html',
+  styleUrls: ['./editor-empleados.component.css']
 })
-export class ProyectosComponent implements OnInit {
+export class EditorEmpleadosComponent implements OnInit {
 
   constructor(private router: Router,private miServicio:ServEmpleadosService, private empleadoser:DataEmpServService ) {
 

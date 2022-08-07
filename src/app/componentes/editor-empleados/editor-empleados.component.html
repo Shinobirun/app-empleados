@@ -1,9 +1,7 @@
+<p>editor-empleados works!</p>
+
+
 <div class="container-fluid">
-    <div class="row justify-content-center">
-        <div class="col">
-            <h1>{{title}}</h1>
-        </div>
-    </div>
     <div class="row justify-content-center">
         <form class="form-group row">
             <div class="form-group col-3">
@@ -24,25 +22,15 @@
             </div>
             <div class="row">
                 <div class="col-2">
-                    <button type="submit" class="btn btn-primary boton" (click)="agregarEmpleado()">Agregar</button>
+                    <button type="submit" class="btn btn-primary boton" (click)="agregarEmpleado()  ">Agregar</button>
                 </div>
             </div>
         </form>
     </div>
-
-</div>
-
-
-<div class="container-fluid listado">
-    <div class="row ">
-        <div class="col-4">
-            <div *ngFor="let empleado of empleados; let i=index">
-                {{i+1}}: {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}} {{empleado.salario}}
-            </div>
+    <div class="row inter"></div>
+    <div class="row align-content-end">
+        <div class=>
+            <button type="button" class="btn btn-primary" (click)="volverHome()">Home</button>
         </div>
     </div>
-
-
 </div>
-
-<app-empleados-h *ngFor="let empleado of empleados; let i=index" [empleadoH]="empleado" [iH]="i"></app-empleados-h>
